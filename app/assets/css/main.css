@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@theme {
+  /* This sets Roboto as the primary sans font and Noto Sans Lao as the fallback */
+  --font-sans: "Roboto", "Noto Sans Lao", ui-sans-serif, system-ui, sans-serif;
+  
+  /* Optional: Create a specific class for Lao text only */
+  --font-lao: "Noto Sans Lao", sans-serif;
+}
+
+/* Optional: Smooth font rendering */
+body {
+  @apply font-sans antialiased;
+}
