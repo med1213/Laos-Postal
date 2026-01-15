@@ -26,7 +26,7 @@ const copy = async (postCode: string, id: number) => {
     copiedId.value = String(id);
     setTimeout(() => {
       copiedId.value = null;
-    }, 2000);
+    }, 1000);
   } catch (error) {
     console.error("Failed to copy:", error);
   }
@@ -107,10 +107,10 @@ const copy = async (postCode: string, id: number) => {
               <p
                 class="text-xs sm:text-sm text-slate-500 mt-1 flex flex-wrap items-center gap-1"
               >
-                <Icon name="mdi:map-marker" size="12" class="flex-shrink-0" />
+                <Icon name="mdi:map-marker" size="12" class="shrink-0" />
                 <span class="truncate">{{ item.provinceId.name_en }}</span>
                 <span
-                  class="mx-1 inline-block w-1 h-1 bg-slate-300 rounded-full flex-shrink-0"
+                  class="mx-1 inline-block w-1 h-1 bg-slate-300 rounded-full shrink-0"
                 ></span>
                 <span
                   :class="
@@ -125,7 +125,7 @@ const copy = async (postCode: string, id: number) => {
               </p>
             </div>
 
-            <div class="text-right ml-2 flex-shrink-0">
+            <div class="text-right ml-2 shrink-0">
               <div
                 class="text-xl sm:text-2xl font-black text-blue-600 tracking-wider group-hover:scale-110 transition-transform"
               >
@@ -146,7 +146,7 @@ const copy = async (postCode: string, id: number) => {
                 />
                 <Icon
                   v-else
-                  name="mdi:check"
+                  name="mdi:check-all"
                   size="16"
                   class="text-green-500"
                 />
